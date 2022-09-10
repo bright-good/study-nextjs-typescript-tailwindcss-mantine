@@ -8,5 +8,5 @@ module.exports = {
   corePlugins: {
     preflight: false,
   },
- important: '#__next',
-}
+  important: "#__next",
+};
