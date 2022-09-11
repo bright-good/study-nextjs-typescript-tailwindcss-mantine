@@ -1,3 +1,4 @@
 {
+  "plugins": ["sort-keys-custom-order"],
   "extends": ["next/core-web-vitals","prettier"]
 }
