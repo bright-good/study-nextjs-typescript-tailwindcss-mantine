@@ -1,3 +1,4 @@
+/*eslint-disable sort-keys-custom-order/object-keys */
 /* https://mantine.dev/theming/extend-theme/ */
 const mantineColors = {
   m_dark: {
@@ -169,26 +170,27 @@ const mantineColors = {
     9: "#D9480F",
   },
 };
+/*eslint-enable sort-keys-custom-order/object-keys */
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
-  theme: {
-    /* Mantineと一致させる: https://mantine.dev/theming/responsive */
-    screens: {
-      xs: "576px",
-      sm: "768px",
-      md: "992px",
-      lg: "1200px",
-      xl: "1400px",
-    },
-    extend: {
-      colors: mantineColors,
-    },
-  },
-  plugins: [],
   corePlugins: {
     preflight: false,
   },
   important: "#__next",
+  plugins: [],
+  theme: {
+    extend: {
+      colors: mantineColors,
+    },
+    /* Mantineと一致させる: https://mantine.dev/theming/responsive */
+    screens: {
+      lg: "1200px",
+      md: "992px",
+      sm: "768px",
+      xl: "1400px",
+      xs: "576px",
+    },
+  },
 };
