@@ -1,15 +1,16 @@
 import "src/lib/mantineBase.css";
 import "src/lib/tailwind.css";
 import "../styles/globals.css";
-import type { AppProps } from "next/app";
-import { MantineProvider } from "@mantine/core";
 
-function MyApp({ Component, pageProps }: AppProps) {
+import { MantineProvider } from "@mantine/core";
+import { AppProps } from "next/app";
+
+const MyApp = (props: AppProps) => {
   return (
     <MantineProvider withGlobalStyles withNormalizeCSS>
-      <Component {...pageProps} />
+      <props.Component {...props.pageProps} />
     </MantineProvider>
   );
-}
+};
 
 export default MyApp;
